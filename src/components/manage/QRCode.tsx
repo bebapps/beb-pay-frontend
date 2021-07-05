@@ -23,9 +23,12 @@ const QRCode: React.FC<QRCodeProps> = ({ size, color, data, imageUrl }) => {
   };
 
   const updateSize = () => {
+    if (!elRef.current || !qrCodeRef.current) {
+      return;
+    }
     const adjustedSize = getAdjustedSize();
 
-    qrCodeRef.current?.update({
+    qrCodeRef.current.update({
       width: adjustedSize,
       height: adjustedSize,
     });
