@@ -18,15 +18,11 @@ const Manage = () => {
       <Sidebar />
       <div className={css.Manage__content}>
         <Switch>
-          <Route path={ManagementPath.branding}>
-            <Branding />
-          </Route>
+          <Route path={ManagementPath.branding} component={Branding} />
           <Route path={ManagementPath.products}>
             Products
           </Route>
-          <Route path={ManagementPath.experience}>
-            <Experience />
-          </Route>
+          <Route path={ManagementPath.experience} component={Experience} />
           <Route path={ManagementPath.details}>
             Your details
           </Route>

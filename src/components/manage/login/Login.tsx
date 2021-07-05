@@ -23,15 +23,9 @@ const Login = () => {
           <Logo size={48} />
         </div>
         <Switch>
-          <Route path={ManagementPath.createAccount}>
-            <CreateAccount />
-          </Route>
-          <Route path={ManagementPath.forgotPassword}>
-            <ForgotPassword />
-          </Route>
-          <Route>
-            <LoginForm />
-          </Route>
+          <Route path={ManagementPath.createAccount} component={CreateAccount} />
+          <Route path={ManagementPath.forgotPassword} component={ForgotPassword} />
+          <Route component={LoginForm} />
         </Switch>
       </Panel>
     </div>
