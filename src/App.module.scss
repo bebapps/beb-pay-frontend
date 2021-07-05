@@ -1,0 +1,40 @@
+.App {
+  box-sizing: border-box;
+  --box-shadow-alpha: 0;
+
+  // Default colors
+  --color-primary: #562885;
+  --color-primary--hover: #633592;
+  --color-primary--text: #ffffff;
+
+  --color-grey: #4C4452;
+  --color-grey-l: #B1A8B9;
+  --color-grey-xl: #f3f2f5;
+
+  --color-green: #008772;
+  --color-red: #BA290A;
+
+  --color-text: #222;
+  --color-subtext: #333;
+
+  // Default spacing
+  --spacing-xs: 2px;
+  --spacing-s: 4px;
+  --spacing-m: 8px;
+  --spacing-l: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-xxxl: 48px;
+
+  // Default border-radius
+  --border-radius-xs: 2px;
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 12px;
+
+  // Default icon styling
+  --icon-stroke-width: 2px;
+
+  // Default text
+  --text: var(--color-text);
+}
