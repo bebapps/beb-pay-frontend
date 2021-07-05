@@ -1,0 +1,9 @@
+.Manage {
+  display: flex;
+  overflow: auto;
+
+  &__content {
+    padding: var(--spacing-xl);
+    flex-grow: 1;
+  }
+}

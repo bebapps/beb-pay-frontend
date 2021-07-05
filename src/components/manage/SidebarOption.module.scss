@@ -1,0 +1,61 @@
+.SidebarOption {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: start;
+  position: relative;
+  padding: var(--spacing-l) var(--spacing-l);
+  cursor: pointer;
+  font: inherit;
+  display: block;
+  text-decoration: none;
+
+  &:not(&--active):hover {
+    transition: 0.1s;
+    font-weight: inherit;
+    background-color: var(--color-grey-xd);
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    color: var(--subtext)
+  }
+
+  &--active {
+    transition: 0.1s;
+    font-weight: 500;
+
+    &:hover {
+      font-weight: 500;
+    }
+
+    background-color: #ffffff;
+    --text: var(--color-text);
+    --subtext: var(--color-subtext);
+
+    &::before,
+    &::after {
+      background-color: inherit;
+      content: ' ';
+      width: 8px;
+      height: 8px;
+      right: 0;
+      position: absolute;
+      z-index: 2;
+    }
+
+    &::before {
+      top: -8px;
+      clip-path: path("M8,0 a8,8 0 0 1 -8,8 h8 z");
+    }
+
+    &::after {
+      top: 100%;
+      clip-path: path("M0,0 a8,8 0 0 1 8,8 v-8 z");
+    }
+  }
+}

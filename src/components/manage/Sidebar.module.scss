@@ -1,0 +1,38 @@
+.Sidebar {
+  --text: #fff;
+  --subtext: var(--color-grey-l);
+
+  width: 220px;
+  min-height: 100vh;
+  background-color: var(--color-grey-xxd);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    padding: var(--spacing-xxl) var(--spacing-m);
+    --text: var(--color-grey-l);
+  }
+
+  &__navigation {
+    flex-grow: 1;
+
+    &__options {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &__account {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-l) var(--spacing-s);
+
+    &__logout {
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}
