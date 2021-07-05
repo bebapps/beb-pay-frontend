@@ -1,0 +1,31 @@
+.InputWrapper {
+  display: block;
+  padding: var(--spacing-m) var(--spacing-l);
+  background-color: white;
+  margin: var(--spacing-l) 0;
+  border-radius: var(--border-radius-m);
+  border: 2px solid white;
+  transition: border 0.2s;
+
+  &__label {
+    color: var(--color-primary);
+    font-weight: 700;
+    width: 100%;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    padding-bottom: var(--spacing-s);
+  }
+
+  &--TextField {
+    cursor: text;
+
+    &:focus-within {
+      .InputWrapper__label {
+        font-weight: 800;
+      }
+
+      border-color: var(--color-primary);
+    }
+  }
+
+}

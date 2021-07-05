@@ -1,0 +1,25 @@
+.TextField {
+  width: 100% !important; // !important for when textarea is used  
+  outline: none;
+  border: none;
+  margin: var(--spacing-s) 0;
+  color: var(--color-text);
+  background-color: transparent;
+  font-size: 0.9em;
+}
+
+textarea.TextField {
+  min-height: 3em;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 2px;
+    background: var(--color-primary);
+  }
+}
