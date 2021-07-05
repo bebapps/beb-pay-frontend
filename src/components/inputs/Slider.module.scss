@@ -1,0 +1,35 @@
+.Slider {
+  appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.9;
+  transition: opacity .1s;
+  border-radius: 8px;
+  border: solid 1px var(--color-grey-l);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    background: var(--color-primary);
+    border: solid 1px var(--color-grey-l);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    background: var(--color-primary);
+    border: solid 1px var(--color-grey-l);
+    cursor: pointer;
+  }
+}
