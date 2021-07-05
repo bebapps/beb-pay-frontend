@@ -5,6 +5,7 @@ import Branding from './Branding';
 import ManagementPath from '../../enums/ManagementPath';
 import css from './Manage.module.scss';
 import Sidebar from './Sidebar';
+import Launch from './Launch';
 
 const Manage = () => {
   const { isLoggedIn } = useAuthentication();
@@ -32,9 +33,7 @@ const Manage = () => {
           <Route path={ManagementPath.monitors}>
             Monitors
           </Route>
-          <Route path={ManagementPath.launch}>
-            Launch
-          </Route>
+          <Route path={ManagementPath.launch} component={Launch} />
           <Route>
             <Redirect to={ManagementPath.branding} />
           </Route>
