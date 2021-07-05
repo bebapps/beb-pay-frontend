@@ -1,5 +1,6 @@
 import { Redirect, Route, Switch } from 'react-router';
 import { useAuthentication } from '../../hooks/useAuthentication';
+import Branding from './Branding';
 import ManagementPath from '../../enums/ManagementPath';
 import css from './Manage.module.scss';
 import Sidebar from './Sidebar';
@@ -17,7 +18,7 @@ const Manage = () => {
       <div className={css.Manage__content}>
         <Switch>
           <Route path={ManagementPath.branding}>
-            Branding
+            <Branding />
           </Route>
           <Route path={ManagementPath.products}>
             Products
