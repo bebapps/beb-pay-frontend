@@ -1,5 +1,6 @@
 import css from './App.module.scss';
 import { Route, Switch } from 'react-router';
+import Manage from './components/manage/Manage';
 import { BrowserRouter } from 'react-router-dom';
 import Login from './components/manage/login/Login';
 import ManagementPath from './enums/ManagementPath';
@@ -13,7 +14,7 @@ const App = () => {
             <Login />
           </Route>
           <Route path={ManagementPath.manage}>
-            Manage
+            <Manage />
           </Route>
           <Route>
             Home
