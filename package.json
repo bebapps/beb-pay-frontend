@@ -48,5 +48,6 @@
     "eslint-plugin-react": "^7.24.0",
     "ngrok": "^4.0.1",
     "sass": "^1.35.1"
-  }
+  },
+  "proxy": "https://beb-pay.bebapps.dev"
 }
