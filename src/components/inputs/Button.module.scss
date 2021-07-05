@@ -1,0 +1,39 @@
+.Button {
+  border: none;
+  margin: 0;
+  padding: calc(var(--spacing-xs) + 0.1em) calc(0.1em + var(--spacing-s)*2);
+  width: auto;
+  cursor: pointer;
+  border-radius: var(--border-radius-m);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+
+  &--none {
+    background: transparent;
+  }
+
+  &--primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary--text);
+    background-color: var(--color-primary--hover);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary--hover);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &--fullWidth {
+    width: 100%;
+  }
+}
