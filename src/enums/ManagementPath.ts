@@ -2,7 +2,7 @@ enum ManagementPath {
   manage = '/manage',
   // Login
   login = '/manage/login',
-  createAccount = '/manage/login/create-account',
+  createAccount = '/manage/register',
   forgotPassword = '/manage/login/forgot-password',
   // Setup
   branding = '/manage/branding',

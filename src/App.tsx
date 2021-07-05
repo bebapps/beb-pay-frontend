@@ -11,6 +11,7 @@ const App = () => {
       <div className={css.App}>
         <Switch>
           <Route path={ManagementPath.login} component={Login} />
+          <Route path={ManagementPath.createAccount} component={Login} />
           <Route path={ManagementPath.manage} component={Manage} />
           <Route>
             Home

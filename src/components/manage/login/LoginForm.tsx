@@ -6,7 +6,7 @@ import Button from '../../inputs/Button';
 import InputWrapper from '../../inputs/InputWrapper';
 import TextField from '../../inputs/TextField';
 import ManagementPath from '../../../enums/ManagementPath';
-import css from './LoginForm.module.scss';
+import css from './Form.module.scss';
 
 const LoginForm = () => {
   const { login } = useAuthentication();
@@ -58,7 +58,7 @@ const LoginForm = () => {
           />
         </InputWrapper>
         {errorMessage &&
-          <div className={css.LoginForm__errorMessage}>
+          <div className={css.Form__errorMessage}>
             {errorMessage}
           </div>
         }
@@ -68,15 +68,15 @@ const LoginForm = () => {
           disabled={isLoggingIn}
         >
           <div
-            className={classNames(css.LoginForm__loginButton, {
-              [css['LoginForm__loginButton--loading']]: isLoggingIn,
+            className={classNames(css.Form__actionButton, {
+              [css['LoginForm__actionButton--loading']]: isLoggingIn,
             })}
           >
             Login
           </div>
         </Button>
       </form>
-      <div className={css.LoginForm__links}>
+      <div className={css.Form__links}>
         <Link to={ManagementPath.createAccount}>Create an account</Link>
         <br />
         <Link to={ManagementPath.forgotPassword}>Forgot your password?</Link>

@@ -64,6 +64,17 @@ export const useAuthentication = () => {
     return await handleAuthorizationResponse(response);
   };
 
+  const register = async (email: string, password: string) => {
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+    return await handleAuthorizationResponse(response);
+  };
+
   const logout = () => {
     localStorage.removeItem(TOKENS_LOCAL_STORAGE_KEY);
     listeners.forEach((listener) => listener(null));
@@ -116,5 +127,5 @@ export const useAuthentication = () => {
 
   const isLoggedIn = !!tokens;
 
-  return { isLoggedIn, login, logout, getAccessToken };
+  return { isLoggedIn, register, login, logout, getAccessToken };
 };

@@ -1,0 +1,15 @@
+@mixin loading {
+  overflow: hidden;
+  text-align: left;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "\2026";
+  width: 0px;
+  position: absolute;
+  margin-left: 1px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.2em;
+  }
+}

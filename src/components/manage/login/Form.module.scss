@@ -1,22 +1,18 @@
-.LoginForm {
+@import '../../../styles/ellipsis.scss';
+
+.Form {
   &__errorMessage {
     margin: var(--spacing-l) var(--spacing-s);
     color: var(--color-red);
     font-weight: 500;
   }
 
-  &__loginButton {
+  &__actionButton {
     color: inherit;
     padding: 8px;
 
     &--loading:after {
-      overflow: hidden;
-      text-align: left;
-      animation: ellipsis steps(4, end) 900ms infinite;
-      content: "\2026";
-      width: 0px;
-      position: absolute;
-      margin-left: 1px;
+      @include loading;
     }
   }
 
@@ -24,11 +20,5 @@
     margin-top: var(--spacing-xxxl);
     text-align: center;
     font-size: 0.9em;
-  }
-}
-
-@keyframes ellipsis {
-  to {
-    width: 1.2em;
   }
 }
