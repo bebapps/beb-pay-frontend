@@ -1,0 +1,16 @@
+.FileDropper {
+  width: fit-content;
+  padding: var(--spacing-m) var(--spacing-l);
+  margin: var(--spacing-s) 0;
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--border-radius-m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+  &--hover {
+    color: var(--color-primary);
+  }
+}
