@@ -1,5 +1,6 @@
 import { Redirect, Route, Switch } from 'react-router';
 import { useAuthentication } from '../../hooks/useAuthentication';
+import Experience from './Experience';
 import Branding from './Branding';
 import ManagementPath from '../../enums/ManagementPath';
 import css from './Manage.module.scss';
@@ -24,7 +25,7 @@ const Manage = () => {
             Products
           </Route>
           <Route path={ManagementPath.experience}>
-            Experience
+            <Experience />
           </Route>
           <Route path={ManagementPath.details}>
             Your details
