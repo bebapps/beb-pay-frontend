@@ -1,0 +1,47 @@
+// https://codepen.io/adielhercules/pen/dJJGBQ
+.IPhone {
+  position: relative;
+  margin: 20px;
+  width: 360px;
+  height: 780px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 18px #111;
+  z-index: 10;
+
+  &__header {
+    font-size: 12px;
+    background-color: #444;
+    color: white;
+    padding-top: 34px;
+    padding-bottom: 6px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 40px 40px 0 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  // home button indicator
+  &:after {
+    bottom: 7px;
+    width: 140px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+
+  // frontal camera/speaker frame
+  &:before {
+    top: 0px;
+    width: 56%;
+    height: 30px;
+    background-color: #1f1f1f;
+    border-radius: 0px 0px 40px 40px;
+  }
+}
