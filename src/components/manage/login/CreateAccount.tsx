@@ -68,7 +68,7 @@ const CreateAccount = () => {
         >
           <div
             className={classNames(css.Form__actionButton, {
-              [css['LoginForm__actionButton--loading']]: isCreatingAccount,
+              [css['Form__actionButton--loading']]: isCreatingAccount,
             })}
           >
             Create account

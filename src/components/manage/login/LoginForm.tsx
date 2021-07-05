@@ -69,7 +69,7 @@ const LoginForm = () => {
         >
           <div
             className={classNames(css.Form__actionButton, {
-              [css['LoginForm__actionButton--loading']]: isLoggingIn,
+              [css['Form__actionButton--loading']]: isLoggingIn,
             })}
           >
             Login
