@@ -1,0 +1,26 @@
+.Login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__panel {
+    mix-blend-mode: screen;
+    width: 400px;
+    z-index: 1;
+
+    &__logo {
+      margin-bottom: var(--spacing-xxl);
+    }
+  }
+
+  &__background {
+    z-index: 0;
+    background: linear-gradient(70deg, var(--color-grey-xxd) 20%, 65%, var(--color-primary) 95%);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0% 60%);
+  }
+}

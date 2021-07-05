@@ -1,0 +1,14 @@
+.Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(var(--logo-size));
+  font-weight: bold;
+  line-height: 1em;
+  cursor: default;
+
+  &__icon {
+    --icon-stroke-width: 3;
+    margin-right: calc(var(--logo-size) / 6);
+  }
+}

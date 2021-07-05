@@ -1,6 +1,7 @@
 import css from './App.module.scss';
 import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
+import Login from './components/manage/login/Login';
 import ManagementPath from './enums/ManagementPath';
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
       <div className={css.App}>
         <Switch>
           <Route path={ManagementPath.login}>
-            Login
+            <Login />
           </Route>
           <Route path={ManagementPath.manage}>
             Manage
