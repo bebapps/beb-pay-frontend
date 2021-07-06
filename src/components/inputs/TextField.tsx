@@ -7,9 +7,10 @@ interface TextFieldProps {
   onChange: (value: string) => void;
   autoFocus?: boolean;
   required?: boolean;
+  onBlur?: () => void;
 }
 
-const TextField: React.FC<TextFieldProps> = ({ placeholder, type, value, onChange, autoFocus, required }) => {
+const TextField: React.FC<TextFieldProps> = ({ placeholder, type, value, onChange, autoFocus, required, onBlur }) => {
   const Component = type === 'textarea' ? 'textarea' : 'input';
   return (
     <Component
@@ -20,6 +21,7 @@ const TextField: React.FC<TextFieldProps> = ({ placeholder, type, value, onChang
       value={value}
       onChange={(e: React.ChangeEvent<HTMLTextAreaElement & HTMLInputElement>) => onChange(e.currentTarget.value)}
       className={css.TextField}
+      onBlur={onBlur}
     />
   );
 };
