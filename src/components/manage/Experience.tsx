@@ -1,7 +1,6 @@
 import ExperienceOptionsPanel from './ExperienceOptionsPanel';
 import css from './Experience.module.scss';
 import Preview from './preview/Preview';
-import Example from '../Example';
 import Branding from '../../interfaces/Branding';
 
 const DEFAULT_BRANDING: Branding = {
@@ -27,7 +26,7 @@ const Experience: React.FC<ExperienceProps> = ({ branding, setBranding, onComple
         onComplete={onComplete}
       />
       <Preview {...branding}>
-        <Example />
+        Example
       </Preview>
     </div>
   );
