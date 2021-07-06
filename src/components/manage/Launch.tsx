@@ -1,13 +1,20 @@
 import { useState } from 'react';
+import Store from '../../interfaces/Store';
 import InputWrapper from '../inputs/InputWrapper';
 import Toggle from '../inputs/Toggle';
 import Panel from '../Panel';
 import css from './Launch.module.scss';
 import QRCode from './QRCode';
 
-const Launch: React.FC = () => {
-  const [storeCanBeAccessed, setStoreCanBeAccessed] = useState(true);
+interface LaunchProps {
+  url: string;
+  logoUrl: string;
+  color: string;
+  status: Store['status'];
+  setStatus: (value: Store['status']) => void;
+}
 
+const Launch: React.FC<LaunchProps> = ({ url, logoUrl, color, status, setStatus }) => {
   return (
     <div className={css.Launch}>
       <Panel className={css.Launch__panel}>
@@ -20,17 +27,17 @@ const Launch: React.FC = () => {
         <br />
         <InputWrapper label="Store can be accessed">
           <Toggle
-            value={storeCanBeAccessed}
-            onChange={setStoreCanBeAccessed}
+            value={status === 'active'}
+            onChange={() => setStatus(status === 'active' ? 'inactive' : 'active')}
           />
         </InputWrapper>
       </Panel>
       <div className={css.Launch__qrCode}>
         <QRCode
           size="65%"
-          color="#562885"
-          data={`${window.location.origin}/${'storeID'}`} // TODO: provide store id
-          imageUrl="" // TODO: provide store logo
+          color={color}
+          data={url}
+          imageUrl={logoUrl}
         />
       </div>
     </div>

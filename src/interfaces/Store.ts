@@ -6,8 +6,9 @@ interface Store {
   logo: string | Blob;
   country: string | null;
   currency: string | null;
+  url: string;
   branding: {
-    [key: string]: string | number | boolean;
+    primaryColor: string;
   };
 }
 

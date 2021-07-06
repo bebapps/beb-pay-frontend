@@ -87,7 +87,18 @@ const Manage = () => {
           <Route path={ManagementPath.monitors}>
             Monitors
           </Route>
-          <Route path={ManagementPath.launch} component={Launch} />
+          <Route path={ManagementPath.launch}>
+            <Launch
+              url={store.url}
+              logoUrl={typeof store.logo === 'string' ? store.logo : ''}
+              color={store.branding.primaryColor || '#562885'}
+              status={store.status}
+              setStatus={(value: Store['status']) => {
+                updateLocalStore('status', value);
+                updateStore('status', value);
+              }}
+            />
+          </Route>
           <Route>
             <Redirect to={ManagementPath.branding} />
           </Route>
