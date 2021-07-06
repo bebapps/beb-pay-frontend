@@ -7,9 +7,10 @@ interface SliderProps {
   max: number;
   step: number;
   onChange: (value: number) => void;
+  onComplete?: () => void;
 }
 
-const Slider: React.FC<SliderProps> = ({ min, max, onChange, step, value }) => {
+const Slider: React.FC<SliderProps> = ({ min, max, onChange, onComplete, step, value }) => {
   const backgroundPercentage = (value - min) / (max - min) * 100;
 
   return (
@@ -22,6 +23,8 @@ const Slider: React.FC<SliderProps> = ({ min, max, onChange, step, value }) => {
       step={step}
       value={value}
       onChange={(e) => onChange(Number(e.target.value))}
+      onMouseUp={onComplete}
+      onTouchEnd={onComplete}
     />
   );
 };
