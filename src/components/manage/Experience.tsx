@@ -6,7 +6,6 @@ import Branding from '../../interfaces/Branding';
 
 const DEFAULT_BRANDING: Branding = {
   primaryColor: '#562885',
-  primaryHoverColor: '#633592',
   iconStrokeWidth: 2,
   borderRadius: 4,
   boxShadowAlpha: 0.05,

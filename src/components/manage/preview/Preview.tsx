@@ -6,7 +6,7 @@ import css from './Preview.module.scss';
 
 interface PreviewProps extends Branding { }
 
-const Preview: React.FC<PreviewProps> = ({ iconStrokeWidth, primaryColor, primaryHoverColor, borderRadius, boxShadowAlpha, children }) => (
+const Preview: React.FC<PreviewProps> = ({ iconStrokeWidth, primaryColor, borderRadius, boxShadowAlpha, children }) => (
   <div
     style={{
       '--color-primary': primaryColor,
