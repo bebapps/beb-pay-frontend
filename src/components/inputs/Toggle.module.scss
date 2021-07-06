@@ -14,12 +14,16 @@
     height: 0;
   }
 
-  &__input:checked+&__slider:before {
-    transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
-  }
-
   &__input:checked+&__slider {
     background-color: var(--color-green);
+
+    &::before {
+      transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
+    }
+  }
+
+  &__input:disabled+&__slider {
+    cursor: not-allowed;
   }
 
   &__slider {
