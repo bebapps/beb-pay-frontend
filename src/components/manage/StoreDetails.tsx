@@ -3,9 +3,9 @@ import FileDropper from '../inputs/FileDropper';
 import InputWrapper from '../inputs/InputWrapper';
 import TextField from '../inputs/TextField';
 import Panel from '../Panel';
-import css from './Branding.module.scss';
+import css from './StoreDetails.module.scss';
 
-interface BrandingProps {
+interface StoreDetailsProps {
   name: string;
   setName: (value: string) => void;
   logo: Store['logo'];
@@ -15,10 +15,10 @@ interface BrandingProps {
   onBlur: (key: keyof Store) => void;
 }
 
-const Branding: React.FC<BrandingProps> = ({ name, setName, description, setDescription, logo, setLogo, onBlur }) => {
+const StoreDetails: React.FC<StoreDetailsProps> = ({ name, setName, description, setDescription, logo, setLogo, onBlur }) => {
   return (
-    <div className={css.Branding}>
-      <Panel className={css.Branding__panel}>
+    <div className={css.StoreDetails}>
+      <Panel className={css.StoreDetails__panel}>
 
         <InputWrapper label="Name">
           <TextField
@@ -51,4 +51,4 @@ const Branding: React.FC<BrandingProps> = ({ name, setName, description, setDesc
   );
 };
 
-export default Branding;
+export default StoreDetails;

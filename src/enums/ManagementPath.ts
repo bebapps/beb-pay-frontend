@@ -5,7 +5,7 @@ enum ManagementPath {
   createAccount = '/manage/register',
   forgotPassword = '/manage/login/forgot-password',
   // Setup
-  branding = '/manage/branding',
+  storeDetails = '/manage/store',
   products = '/manage/products',
   experience = '/manage/experience',
   details = '/manage/details',

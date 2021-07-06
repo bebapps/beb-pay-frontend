@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router';
 import { useAuthentication } from '../../hooks/useAuthentication';
 import Experience from './Experience';
-import Branding from './Branding';
+import StoreDetails from './StoreDetails';
 import ManagementPath from '../../enums/ManagementPath';
 import css from './Manage.module.scss';
 import Sidebar from './Sidebar';
@@ -59,8 +59,8 @@ const Manage = () => {
       <Sidebar />
       <div className={css.Manage__content}>
         <Switch>
-          <Route path={ManagementPath.branding}>
-            <Branding
+          <Route path={ManagementPath.storeDetails}>
+            <StoreDetails
               name={store.name}
               setName={(value: string) => updateLocalStore('name', value)}
               description={store.description}
@@ -101,7 +101,7 @@ const Manage = () => {
             />
           </Route>
           <Route>
-            <Redirect to={ManagementPath.branding} />
+            <Redirect to={ManagementPath.storeDetails} />
           </Route>
         </Switch>
       </div>

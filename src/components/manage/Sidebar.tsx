@@ -6,7 +6,7 @@ import css from './Sidebar.module.scss';
 import SidebarOption from './SidebarOption';
 
 const tabs = [
-  { id: ManagementPath.branding, title: 'Branding', subtitle: 'Setup branding' },
+  { id: ManagementPath.storeDetails, title: 'Store', subtitle: 'Setup your store details' },
   { id: ManagementPath.products, title: 'Products', subtitle: 'Add products and deals' },
   { id: ManagementPath.experience, title: 'Experience', subtitle: 'Customize the user experience' },
   { id: ManagementPath.details, title: 'Your details', subtitle: 'Enter your legal and payment details' },
