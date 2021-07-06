@@ -1,3 +1,5 @@
+import Branding from './Branding';
+
 interface Store {
   id: string;
   name: string;
@@ -7,9 +9,7 @@ interface Store {
   country: string | null;
   currency: string | null;
   url: string;
-  branding: {
-    primaryColor: string;
-  };
+  branding: Branding;
 }
 
 export default Store;

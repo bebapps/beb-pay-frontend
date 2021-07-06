@@ -40,7 +40,7 @@ export const useRequest = () => {
           : {}
         ),
       },
-      body,
+      body: (!body || body instanceof FormData) ? body : JSON.stringify(body),
     });
     const json = await response.json();
     if (response.ok && json.success) {

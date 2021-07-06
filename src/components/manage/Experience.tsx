@@ -1,18 +1,10 @@
 import ExperienceOptionsPanel from './ExperienceOptionsPanel';
 import css from './Experience.module.scss';
-import { useState } from 'react';
 import Preview from './preview/Preview';
+import Example from '../Example';
+import Branding from '../../interfaces/Branding';
 
-export interface ExperienceOptions {
-  primaryColor: string;
-  primaryHoverColor: string;
-  iconStrokeWidth: number;
-  borderRadius: number;
-  boxShadowAlpha: number;
-  animations: boolean;
-}
-
-const DEFAULT_EXPERIENCE_OPTIONS: ExperienceOptions = {
+const DEFAULT_BRANDING: Branding = {
   primaryColor: '#562885',
   primaryHoverColor: '#633592',
   iconStrokeWidth: 2,
@@ -21,17 +13,22 @@ const DEFAULT_EXPERIENCE_OPTIONS: ExperienceOptions = {
   animations: true,
 };
 
-const Experience: React.FC = () => {
-  const [experienceOptions, setExperienceOptions] = useState<ExperienceOptions>(DEFAULT_EXPERIENCE_OPTIONS);
+interface ExperienceProps {
+  branding: Branding;
+  setBranding: (value: Branding) => void;
+  onComplete: (value: Branding) => void;
+}
 
+const Experience: React.FC<ExperienceProps> = ({ branding, setBranding, onComplete }) => {
   return (
     <div className={css.Experience} >
       <ExperienceOptionsPanel
-        options={experienceOptions as any}
-        setOptions={setExperienceOptions as any}
+        branding={{ ...DEFAULT_BRANDING, ...branding }}
+        setBranding={setBranding}
+        onComplete={onComplete}
       />
-      <Preview {...experienceOptions}>
-        Preview
+      <Preview {...branding}>
+        <Example />
       </Preview>
     </div>
   );

@@ -17,12 +17,17 @@ const Manage = () => {
   const [store, setStore] = useState<Store>();
 
   const updateStore = async <T extends keyof Store>(key: T, value?: Store[T]) => {
-    const formData = new FormData();
     const updateValue = value || store![key];
-    if (updateValue) {
-      formData.append(key, updateValue instanceof Blob ? updateValue : `${updateValue}`);
+
+    let requestBody;
+    if (updateValue instanceof Blob) {
+      requestBody = new FormData();
+      requestBody.append(key, updateValue);
+    } else {
+      requestBody = { [key]: updateValue };
     }
-    return request('PUT', `/api/stores/${store!.id}`, formData);
+
+    return request('PUT', `/api/stores/${store!.id}`, requestBody);
   };
 
   const updateLocalStore = <T extends keyof Store>(key: T, value: Store[T]) => {
@@ -77,7 +82,13 @@ const Manage = () => {
           <Route path={ManagementPath.products}>
             Products
           </Route>
-          <Route path={ManagementPath.experience} component={Experience} />
+          <Route path={ManagementPath.experience}>
+            <Experience
+              branding={store.branding}
+              setBranding={(value) => updateLocalStore('branding', value)}
+              onComplete={(value) => updateStore('branding', value)}
+            />
+          </Route>
           <Route path={ManagementPath.details}>
             Your details
           </Route>
