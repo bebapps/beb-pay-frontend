@@ -10,6 +10,16 @@
   text-align: center;
   cursor: pointer;
 
+  &__image {
+    object-fit: contain;
+    width: 70px;
+    height: 70px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
   &--hover {
     color: var(--color-primary);
   }
