@@ -97,6 +97,7 @@ const Manage = () => {
                 updateLocalStore('status', value);
                 updateStore('status', value);
               }}
+              hasCountryAndCurrencySet={!!store.country && !!store.currency}
             />
           </Route>
           <Route>

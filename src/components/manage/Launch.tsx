@@ -11,9 +11,10 @@ interface LaunchProps {
   color: string;
   status: Store['status'];
   setStatus: (value: Store['status']) => void;
+  hasCountryAndCurrencySet: boolean;
 }
 
-const Launch: React.FC<LaunchProps> = ({ url, logoUrl, color, status, setStatus }) => {
+const Launch: React.FC<LaunchProps> = ({ url, logoUrl, color, status, setStatus, hasCountryAndCurrencySet }) => {
   return (
     <div className={css.Launch}>
       <Panel className={css.Launch__panel}>
@@ -24,10 +25,16 @@ const Launch: React.FC<LaunchProps> = ({ url, logoUrl, color, status, setStatus 
           Save the QR code to the right, print it out, and put it near the entrance of your store.
         </p>
         <br />
+        {!hasCountryAndCurrencySet && (
+          <p className={css.Launch__panel__warning}>
+            Please select your Country and Currency in the ‘Your details’ tab before going live.
+          </p>
+        )}
         <InputWrapper label="Store can be accessed">
           <Toggle
             value={status === 'active'}
             onChange={() => setStatus(status === 'active' ? 'inactive' : 'active')}
+            disabled={!hasCountryAndCurrencySet}
           />
         </InputWrapper>
       </Panel>
