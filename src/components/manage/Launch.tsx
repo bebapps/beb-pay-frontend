@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Store from '../../interfaces/Store';
 import InputWrapper from '../inputs/InputWrapper';
 import Toggle from '../inputs/Toggle';
