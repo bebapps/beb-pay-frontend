@@ -1,5 +1,4 @@
 import getRGBFromHex from './getRGBFromHex';
-import isColorLight from './isColorLight';
 
 // https://stackoverflow.com/a/62640342
 const getColorShade = (hex: string, amount: number) => {
