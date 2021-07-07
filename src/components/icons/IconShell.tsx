@@ -1,11 +1,12 @@
 export interface IconProps {
   size?: number | string;
+  strokeWidth?: string;
 }
 
-const IconShell: React.FC<IconProps> = ({ children, size }) => (
+const IconShell: React.FC<IconProps> = ({ children, size, strokeWidth }) => (
   <svg
     style={{
-      strokeWidth: 'var(--icon-stroke-width)',
+      strokeWidth: strokeWidth,
     }}
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -22,6 +23,7 @@ const IconShell: React.FC<IconProps> = ({ children, size }) => (
 
 IconShell.defaultProps = {
   size: 24,
+  strokeWidth: 'var(--icon-stroke-width)',
 };
 
 export default IconShell;

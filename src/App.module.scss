@@ -1,6 +1,6 @@
 .App {
   box-sizing: border-box;
-  --box-shadow-alpha: 0;
+  --box-shadow-alpha: 0.1;
 
   // Default colors
   --color-primary: #562885;
@@ -33,6 +33,7 @@
   --border-radius-s: 4px;
   --border-radius-m: 8px;
   --border-radius-l: 12px;
+  --border-radius-xxl: 32px;
 
   // Default icon styling
   --icon-stroke-width: 2px;

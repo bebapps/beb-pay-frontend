@@ -1,0 +1,19 @@
+.Header {
+  width: 100%;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    max-width: 50%;
+    height: 56px;
+    margin: var(--spacing-s) var(--spacing-l);
+    object-fit: contain;
+  }
+
+  &__checkout {
+    margin: var(--spacing-l);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}

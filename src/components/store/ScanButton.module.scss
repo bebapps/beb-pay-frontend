@@ -1,0 +1,12 @@
+.ScanButton {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-xxl);
+  box-shadow: 1px 1px 6px 4px rgb(0, 0, 0, calc(var(--box-shadow-alpha) * 2));
+}
