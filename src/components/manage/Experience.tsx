@@ -25,8 +25,7 @@ const Experience: React.FC<ExperienceProps> = ({ branding, setBranding, onComple
         setBranding={setBranding}
         onComplete={onComplete}
       />
-      <Preview {...branding}>
-        Example
+      <Preview branding={branding}>
       </Preview>
     </div>
   );
