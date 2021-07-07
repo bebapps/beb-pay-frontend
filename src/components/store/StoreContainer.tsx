@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { useAnonymousRequest } from '../../hooks/useAnonymousRequest';
-import { useRequest } from '../../hooks/useRequest';
 import Store from '../../interfaces/Store';
 import BrandingStylesWrapper from '../BrandingStylesWrapper';
 import StoreFront from './StoreFront';
