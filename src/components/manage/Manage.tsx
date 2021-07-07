@@ -85,6 +85,7 @@ const Manage = () => {
           <Route path={ManagementPath.experience}>
             <Experience
               branding={store.branding}
+              logoUrl={typeof store.logo === 'string' ? store.logo : ''}
               setBranding={(value) => updateLocalStore('branding', value)}
               onComplete={(value) => updateStore('branding', value)}
             />
