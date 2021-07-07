@@ -8,13 +8,13 @@ interface PreviewProps {
 }
 
 const Preview: React.FC<PreviewProps> = ({ branding, children }) => (
-  <BrandingStylesWrapper {...branding}>
-    <div className={css.Preview} >
+  <div className={css.Preview} >
+    <BrandingStylesWrapper {...branding}>
       <IPhone>
         {children}
       </IPhone>
-    </div>
-  </BrandingStylesWrapper>
+    </BrandingStylesWrapper>
+  </div>
 );
 
 export default Preview;

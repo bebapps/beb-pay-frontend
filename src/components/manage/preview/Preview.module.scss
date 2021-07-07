@@ -3,4 +3,5 @@
   display: flex;
   justify-content: center;
   padding: var(--spacing-m) var(--spacing-l);
+  pointer-events: none;
 }
