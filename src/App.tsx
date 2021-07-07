@@ -4,6 +4,7 @@ import Manage from './components/manage/Manage';
 import { BrowserRouter } from 'react-router-dom';
 import Login from './components/manage/login/Login';
 import ManagementPath from './enums/ManagementPath';
+import StoreContainer from './components/store/StoreContainer';
 
 const App = () => {
   return (
@@ -13,9 +14,7 @@ const App = () => {
           <Route path={ManagementPath.login} component={Login} />
           <Route path={ManagementPath.createAccount} component={Login} />
           <Route path={ManagementPath.manage} component={Manage} />
-          <Route>
-            Home
-          </Route>
+          <Route path="/:storeId" component={StoreContainer} />
         </Switch>
       </div>
     </BrowserRouter>
