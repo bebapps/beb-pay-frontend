@@ -7,8 +7,8 @@ import SidebarOption from './SidebarOption';
 
 const tabs = [
   { id: ManagementPath.storeDetails, title: 'Store', subtitle: 'Setup your store details' },
-  { id: ManagementPath.products, title: 'Products', subtitle: 'Add products and deals' },
   { id: ManagementPath.experience, title: 'Experience', subtitle: 'Customize the user experience' },
+  { id: ManagementPath.products, title: 'Products', subtitle: 'Add products and deals' },
   { id: ManagementPath.details, title: 'Your details', subtitle: 'Enter your legal and payment details' },
   { id: ManagementPath.webhooks, title: 'Webhooks', subtitle: 'Setup webhooks when things happen' },
   { id: ManagementPath.monitors, title: 'Monitors', subtitle: 'See when purchases happen' },
