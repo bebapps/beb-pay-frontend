@@ -76,7 +76,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
 
           <InputWrapper isTextField label="Description">
             <TextField
-              type="description"
+              type="textarea"
               value={description}
               required
               onChange={value => updateProductValue('description', value)}
