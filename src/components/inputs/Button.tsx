@@ -3,7 +3,7 @@ import css from './Button.module.scss';
 
 type ButtonProps = Pick<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'onClick' | 'disabled' | 'className'> & {
   fullWidth?: boolean;
-  variant?: 'none' | 'primary';
+  variant?: 'none' | 'primary' | 'dark';
 }
 
 const Button: React.FC<ButtonProps> = ({ children, fullWidth, onClick, type, disabled, variant, className }) => {

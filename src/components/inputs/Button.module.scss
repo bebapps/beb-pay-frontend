@@ -23,6 +23,11 @@
     }
   }
 
+  &--dark {
+    --text: #ffffff;
+    background-color: var(--color-text);
+  }
+
   &:disabled {
     cursor: not-allowed;
   }
