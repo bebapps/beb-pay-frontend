@@ -1,0 +1,55 @@
+.CartItemDisplay {
+  border-radius: var(--border-radius-l);
+  border: 1px solid var(--color-grey-l);
+
+  padding: var(--spacing-l);
+
+  &__product {
+    display: flex;
+    width: 100%;
+
+    &__icon {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      margin-right: var(--spacing-l);
+    }
+
+    &__name {
+      font-weight: 500;
+    }
+
+    &__price {
+      margin-top: var(--spacing-s);
+      font-size: 0.8em;
+    }
+  }
+
+  &__actions {
+    margin-top: var(--spacing-l);
+    display: flex;
+    justify-content: space-between;
+
+    &__remove {
+      --text: var(--color-red);
+      padding: 0;
+      width: 60px;
+      text-align: center;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
+    &__quantity {
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__button {
+        width: 2em;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+  }
+}

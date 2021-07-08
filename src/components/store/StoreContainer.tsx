@@ -41,9 +41,13 @@ const StoreContainer: React.FC = () => {
 
   return (
     <BrandingStylesWrapper {...store.branding}>
-      <StoreFront
-        logoUrl={store.logo as string}
-      />
+      <div style={{ minHeight: '100vh' }}>
+        <StoreFront
+          storeId={storeId}
+          logoUrl={store.logo as string}
+          currency={store.currency!}
+        />
+      </div>
     </BrandingStylesWrapper>
   );
 };

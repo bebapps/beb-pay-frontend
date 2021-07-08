@@ -6,13 +6,13 @@
 
   &__logo {
     max-width: 50%;
-    height: 56px;
-    margin: var(--spacing-s) var(--spacing-l);
+    height: 40px;
+    margin: var(--spacing-l);
     object-fit: contain;
   }
 
   &__checkout {
-    margin: var(--spacing-l);
+    margin: var(--spacing-m);
     text-transform: uppercase;
     font-weight: 700;
   }

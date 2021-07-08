@@ -1,5 +1,6 @@
 import Quagga, { QuaggaJSResultObject } from '@ericblade/quagga2';
 import { useRef, useState } from 'react';
+import Barcode from '../interfaces/Barcode';
 
 const startScanner = (target: HTMLDivElement) => {
   Quagga.init({
@@ -38,10 +39,10 @@ const startScanner = (target: HTMLDivElement) => {
   });
 };
 
-export const useQuagga = (onDetected: (result: QuaggaJSResultObject) => void) => {
+export const useQuagga = (onDetected: (result: Barcode) => void) => {
   const scannerTargetRef = useRef<HTMLDivElement>(null);
   const [isScanning, setIsScanning] = useState(false);
-  Quagga.onDetected(onDetected);
+  Quagga.onDetected((result) => onDetected({ code: result.codeResult.code!, format: result.codeResult.format }));
 
   const startScanning = () => {
     if (!isScanning && scannerTargetRef.current) {

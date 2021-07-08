@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: opacity calc(2s * var(--animations-multiplier));
+  transition: opacity calc(0.2s * var(--animations-multiplier));
 
   &--hidden {
     pointer-events: none;

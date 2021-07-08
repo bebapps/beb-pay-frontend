@@ -5,7 +5,9 @@ const IPhone: React.FC = ({ children }) => (
     <div className={css.IPhone__header}>
       bebapps.com
     </div>
-    {children}
+    <div className={css.IPhone__screen}>
+      {children}
+    </div>
   </div>
 );
 

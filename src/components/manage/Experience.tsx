@@ -29,6 +29,8 @@ const Experience: React.FC<ExperienceProps> = ({ branding, logoUrl, setBranding,
       />
       <Preview branding={branding}>
         <StoreFront
+          storeId=""
+          currency="USD"
           logoUrl={logoUrl}
         />
       </Preview>

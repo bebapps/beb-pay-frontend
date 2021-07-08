@@ -3,9 +3,10 @@ import css from './Header.module.scss';
 
 interface HeaderProps {
   logoUrl: string;
+  onCheckout: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ logoUrl }) => {
+const Header: React.FC<HeaderProps> = ({ logoUrl, onCheckout }) => {
   return (
     <div className={css.Header}>
       <img
@@ -14,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ logoUrl }) => {
       />
       <Button
         className={css.Header__checkout}
-        onClick={() => alert('checkout')}
+        onClick={onCheckout}
       >
         Checkout
       </Button>

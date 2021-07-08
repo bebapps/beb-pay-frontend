@@ -1,0 +1,42 @@
+.StoreFront {
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+
+  &__cartItems {
+    margin: 0;
+    padding: 0;
+
+    &__cartItem {
+      list-style: none;
+      padding: var(--spacing-l) var(--spacing-l) 0 var(--spacing-l);
+    }
+  }
+
+  &__cartTotal {
+    padding: var(--spacing-l) var(--spacing-xl);
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  &__noItems {
+    height: calc(100% - 56px - var(--spacing-s));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-xl);
+    font-size: 26px;
+    font-weight: 500;
+
+    &__arrow {
+      --text: var(--color-primary);
+      filter: drop-shadow(1px 1px 6px 4px rgb(0, 0, 0, calc(var(--box-shadow-alpha) * 2)));
+      filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, calc(var(--box-shadow-alpha) * 3)));
+      display: flex;
+      margin: var(--spacing-xxl) 0 0 var(--spacing-l);
+    }
+  }
+}
