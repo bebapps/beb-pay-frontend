@@ -1,0 +1,10 @@
+.StoreContainer {
+  width: 100vw;
+  min-height: 100vh;
+
+  &--loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

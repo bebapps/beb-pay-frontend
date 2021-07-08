@@ -9,6 +9,7 @@ import { useRequest } from '../../hooks/useRequest';
 import { useEffect, useState } from 'react';
 import Launch from './Launch';
 import Store from '../../interfaces/Store';
+import Loader from '../Loader';
 
 const Manage = () => {
   const request = useRequest();
@@ -67,6 +68,9 @@ const Manage = () => {
     return (
       <div className={css.Manage}>
         <Sidebar />
+        <div className={css.Manage__loader}>
+          <Loader />
+        </div>
       </div>
     );
   }

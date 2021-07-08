@@ -1,0 +1,29 @@
+.Loader {
+  position: relative;
+  width: 128px;
+  height: 128px;
+
+  &__bar {
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(transparent, rgb(255, 255, 255, 0.75) 50%, transparent);
+    animation: Scan 1s ease-in-out infinite;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes Scan {
+
+  0%,
+  100% {
+    bottom: calc(100% - 40px);
+
+  }
+
+  50% {
+    bottom: -40px;
+
+  }
+}

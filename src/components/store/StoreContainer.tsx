@@ -3,7 +3,10 @@ import { useParams } from 'react-router';
 import { useAnonymousRequest } from '../../hooks/useAnonymousRequest';
 import Store from '../../interfaces/Store';
 import BrandingStylesWrapper from '../BrandingStylesWrapper';
+import Loader from '../Loader';
 import StoreFront from './StoreFront';
+import css from './StoreContainer.module.scss';
+import classNames from 'classnames';
 
 const StoreContainer: React.FC = () => {
   const { storeId } = useParams<{ storeId: string }>();
@@ -28,7 +31,11 @@ const StoreContainer: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return null;
+    return (
+      <div className={classNames(css.StoreContainer, css['StoreContainer--loader'])}>
+        <Loader />
+      </div>
+    );
   }
 
   if (!store) {
@@ -41,7 +48,7 @@ const StoreContainer: React.FC = () => {
 
   return (
     <BrandingStylesWrapper {...store.branding}>
-      <div style={{ minHeight: '100vh' }}>
+      <div className={css.StoreContainer}>
         <StoreFront
           storeId={storeId}
           logoUrl={store.logo as string}
