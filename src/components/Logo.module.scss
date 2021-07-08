@@ -8,7 +8,7 @@
   cursor: default;
 
   &__icon {
-    --icon-stroke-width: 3;
+    --icon-stroke-width: 3px;
     margin-right: calc(var(--logo-size) / 6);
   }
 }

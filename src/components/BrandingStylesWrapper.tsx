@@ -10,7 +10,7 @@ const BrandingStylesWrapper: React.FC<BrandingStylesWrapperProps> = ({ primaryCo
       '--color-primary': primaryColor,
       '--color-primary--hover': getColorShade(primaryColor, isColorLight(primaryColor) ? -20 : 20),
       '--color-primary--text': isColorLight(primaryColor) ? 'var(--color-text)' : '#ffffff',
-      '--icon-stroke-width': iconStrokeWidth,
+      '--icon-stroke-width': `${iconStrokeWidth}px`,
       '--border-radius-xs': `${borderRadius / 2}px`,
       '--border-radius-s': `${borderRadius}px`,
       '--border-radius-m': `${borderRadius * 2}px`,
