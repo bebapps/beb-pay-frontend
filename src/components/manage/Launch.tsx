@@ -41,7 +41,6 @@ const Launch: React.FC<LaunchProps> = ({ url, logoUrl, color, status, setStatus,
       <div className={css.Launch__qrCode}>
         <QRCode
           size="65%"
-          color={color}
           data={url}
           imageUrl={logoUrl}
         />

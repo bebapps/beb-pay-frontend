@@ -3,12 +3,11 @@ import QRCodeStyling from 'qr-code-styling';
 
 interface QRCodeProps {
   size: number | `${number}%`;
-  color: string;
   data: string;
   imageUrl: string;
 }
 
-const QRCode: React.FC<QRCodeProps> = ({ size, color, data, imageUrl }) => {
+const QRCode: React.FC<QRCodeProps> = ({ size, data, imageUrl }) => {
   const elRef = useRef<HTMLDivElement>(null);
   const qrCodeRef = useRef<QRCodeStyling>();
 
@@ -49,7 +48,6 @@ const QRCode: React.FC<QRCodeProps> = ({ size, color, data, imageUrl }) => {
       data: data,
       image: imageUrl,
       dotsOptions: {
-        color,
         type: 'square',
       },
       qrOptions: {
