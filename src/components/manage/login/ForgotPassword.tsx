@@ -6,7 +6,7 @@ const ForgotPassword = () => {
   return (
     <div className={css.ForgotPassword}>
       <p>
-        Beb pay is currently in Alpha
+        Beb Pay is currently in Alpha
       </p>
       <p>
         If you’ve forgotten your password, please contact us at <a href="mailto:team@bebapps.com">team@bebapps.com</a> to restore access to your account.
