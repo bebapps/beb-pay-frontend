@@ -7,6 +7,7 @@ import Loader from '../Loader';
 import StoreFront from './StoreFront';
 import css from './StoreContainer.module.scss';
 import classNames from 'classnames';
+import Logo from '../Logo';
 
 const StoreContainer: React.FC = () => {
   const { storeId } = useParams<{ storeId: string }>();
@@ -40,7 +41,8 @@ const StoreContainer: React.FC = () => {
 
   if (!store) {
     return (
-      <div>
+      <div className={classNames(css.StoreContainer, css['StoreContainer--message'])}>
+        <Logo />
         No store found. Please scan the code again, or contact the expected store owner
       </div>
     );
