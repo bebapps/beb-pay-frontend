@@ -4,7 +4,7 @@ import Branding from '../interfaces/Branding';
 
 interface BrandingStylesWrapperProps extends Branding { };
 
-const BrandingStylesWrapper: React.FC<BrandingStylesWrapperProps> = ({ primaryColor, iconStrokeWidth, borderRadius, boxShadowAlpha, children }) => (
+const BrandingStylesWrapper: React.FC<BrandingStylesWrapperProps> = ({ primaryColor, iconStrokeWidth, borderRadius, boxShadowAlpha, animations, children }) => (
   <div
     style={{
       '--color-primary': primaryColor,
@@ -17,6 +17,7 @@ const BrandingStylesWrapper: React.FC<BrandingStylesWrapperProps> = ({ primaryCo
       '--border-radius-l': `${borderRadius * 3}px`,
       '--border-radius-xxl': `${borderRadius * 8}px`,
       '--box-shadow-alpha': boxShadowAlpha,
+      '--animations-multiplier': animations ? 1 : 0, // TODO: make this s and calc withotu s for mobile?
     } as any}
   >
     {children}

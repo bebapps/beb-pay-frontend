@@ -40,4 +40,7 @@
 
   // Default text
   --text: var(--color-text);
+
+  // Default animations
+  --animations-multiplier: 1; // TODO update based on store
 }
