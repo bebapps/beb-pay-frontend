@@ -5,9 +5,12 @@
   min-height: 100vh;
 
   &__panel {
-    mix-blend-mode: screen;
     width: 400px;
     z-index: 1;
+
+    &:not(&--safari) {
+      mix-blend-mode: screen;
+    }
 
     &__logo {
       margin-bottom: var(--spacing-xxl);

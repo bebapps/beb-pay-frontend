@@ -7,6 +7,8 @@ import ForgotPassword from './ForgotPassword';
 import CreateAccount from './CreateAccount';
 import { useAuthentication } from '../../../hooks/useAuthentication';
 import Panel from '../../Panel';
+import classNames from 'classnames';
+import isSafari from '../../../helpers/isSafari';
 
 const Login = () => {
   const { isLoggedIn } = useAuthentication();
@@ -18,7 +20,11 @@ const Login = () => {
   return (
     <div className={css.Login}>
       <div className={css.Login__background} />
-      <Panel className={css.Login__panel}>
+      <Panel
+        className={classNames(css.Login__panel, {
+          [css['Login__panel--safari']]: isSafari,
+        })}
+      >
         <div className={css.Login__panel__logo}>
           <Logo size={48} />
         </div>
