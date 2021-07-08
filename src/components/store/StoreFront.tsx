@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useAnonymousRequest } from '../../hooks/useAnonymousRequest';
 import Product from '../../interfaces/Product';
 import CurvedArrow from '../icons/CurvedArrow';
@@ -10,6 +10,7 @@ import Scanner from './Scanner';
 import css from './StoreFront.module.scss';
 import { useCart } from '../../hooks/useCart';
 import Barcode from '../../interfaces/Barcode';
+import { Redirect, useRouteMatch } from 'react-router';
 
 interface StoreFrontProps {
   logoUrl: string;
@@ -19,7 +20,8 @@ interface StoreFrontProps {
 
 const StoreFront: React.FC<StoreFrontProps> = ({ logoUrl, storeId, currency }) => {
   const request = useAnonymousRequest();
-  const { cart, addProduct, checkout, removeProduct, setProductQuantity } = useCart(storeId);
+  const { cart, addProduct, checkout, removeProduct, setProductQuantity, clear } = useCart(storeId);
+  const match = useRouteMatch('/:storeId/checkout/completed');
 
   const checkedCodesRef = useRef<{ [codeAndFormat: string]: Product | null }>({});
 
@@ -51,6 +53,18 @@ const StoreFront: React.FC<StoreFrontProps> = ({ logoUrl, storeId, currency }) =
   const { scannerTargetRef, startScanning, stopScanning, isScanning } = useQuagga(handleBarcodeDetected);
 
   const formatter = Intl.NumberFormat('en-us', { currency, style: 'currency' }); // TODO: use correct locale
+
+  useEffect(() => {
+    if (match?.isExact) {
+      clear();
+    }
+  }, []);
+
+  if (match?.isExact) {
+    return (
+      <Redirect to={`/${storeId}`} />
+    );
+  }
 
   return (
     <div className={css.StoreFront}>
