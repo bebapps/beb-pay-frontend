@@ -31,7 +31,8 @@ const ExperienceOptionsPanel: React.FC<ExperienceOptionsPanelProps> = ({ brandin
         />
       </InputWrapper>
       <InputWrapper label="icon width">
-        <Slider min={0.5}
+        <Slider
+          min={1}
           max={3}
           step={0.5}
           value={iconStrokeWidth}
