@@ -15,6 +15,7 @@ const App = () => {
           <Route path={ManagementPath.createAccount} component={Login} />
           <Route path={ManagementPath.manage} component={Manage} />
           <Route path="/:storeId" component={StoreContainer} />
+          <Route component={Manage} />
         </Switch>
       </div>
     </BrowserRouter>
