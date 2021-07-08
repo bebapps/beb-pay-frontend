@@ -23,9 +23,6 @@ const CartItemDisplay: React.FC<CartItemDisplayProps> = ({ product, quantity, on
           <div className={css.CartItemDisplay__product__name}>
             {name}
           </div>
-          {/* <div className={css.CartItemDisplay__product__description}>
-            {description}
-          </div> */}
           <div className={css.CartItemDisplay__product__price}>
             {formatter.format(price)}{quantity > 1 && ' each'}
           </div>

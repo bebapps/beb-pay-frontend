@@ -1,4 +1,4 @@
-import Quagga, { QuaggaJSResultObject } from '@ericblade/quagga2';
+import Quagga from '@ericblade/quagga2';
 import { useRef, useState } from 'react';
 import Barcode from '../interfaces/Barcode';
 
