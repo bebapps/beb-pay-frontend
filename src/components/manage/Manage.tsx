@@ -30,13 +30,25 @@ const Manage = () => {
     return request('PUT', `/api/stores/${store!.id}`, requestBody);
   };
 
-  const updateLocalStore = <T extends keyof Store>(key: T, value: Store[T]) => {
-    setStore({ ...store!, [key]: value });
-  };
+  const updateLocalStore = <T extends keyof Store>(key: T, value: Store[T]) => setStore({ ...store!, [key]: value });
 
   const loadStore = async () => {
     const { stores } = await request('GET', '/api/stores');
-    setStore(stores[0]);
+    let store = stores[0];
+
+    if (!store) {
+      ({ store } = await request('POST', '/api/stores', {
+        branding: {
+          primaryColor: '#562885',
+          iconStrokeWidth: 2,
+          borderRadius: 4,
+          boxShadowAlpha: 0.05,
+          animations: true,
+        },
+      }));
+    }
+
+    setStore(store);
   };
 
   useEffect(() => {
