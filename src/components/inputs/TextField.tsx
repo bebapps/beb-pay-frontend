@@ -18,7 +18,7 @@ const TextField: React.FC<TextFieldProps> = ({ placeholder, type, value, onChang
       autoFocus={autoFocus}
       type={type}
       placeholder={placeholder}
-      value={value}
+      value={value || ''}
       onChange={(e: React.ChangeEvent<HTMLTextAreaElement & HTMLInputElement>) => onChange(e.currentTarget.value)}
       className={css.TextField}
       onBlur={onBlur}

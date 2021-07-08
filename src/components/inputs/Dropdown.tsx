@@ -13,7 +13,6 @@ const Dropdown: React.FC<DropdownProps> = ({ value, options, onSelect }) => {
     <select
       className={css.Dropdown}
       value={value}
-      defaultValue=""
       onChange={(e) => onSelect(e.target.value)}
     >
       <option
