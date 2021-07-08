@@ -22,7 +22,7 @@ const Dropdown: React.FC<DropdownProps> = ({ value, options, onSelect }) => {
         hidden
       >
         Please select...
-         </option>
+      </option>
       {options.map(({ name, value }) => (
         <option
           key={value}

@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Launch from './Launch';
 import Store from '../../interfaces/Store';
 import Loader from '../Loader';
+import Details from './Details';
 
 const Manage = () => {
   const request = useRequest();
@@ -107,7 +108,18 @@ const Manage = () => {
             />
           </Route>
           <Route path={ManagementPath.details}>
-            Your details
+            <Details
+              country={store.country || ''}
+              setCountry={async (value: string) => {
+                updateLocalStore('country', value);
+                await updateStore('country', value);
+              }}
+              currency={store.currency || ''}
+              setCurrency={async (value: string) => {
+                updateLocalStore('currency', value);
+                await updateStore('currency', value);
+              }}
+            />
           </Route>
           <Route path={ManagementPath.webhooks}>
             Webhooks
