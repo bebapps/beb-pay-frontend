@@ -65,7 +65,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
           }}
         >
 
-          <InputWrapper label="Name">
+          <InputWrapper isTextField label="Name">
             <TextField
               type="text"
               value={name}
@@ -74,7 +74,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
             />
           </InputWrapper>
 
-          <InputWrapper label="Description">
+          <InputWrapper isTextField label="Description">
             <TextField
               type="description"
               value={description}
@@ -83,7 +83,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
             />
           </InputWrapper>
 
-          <InputWrapper label="Price">
+          <InputWrapper isTextField label="Price">
             <TextField
               type="number"
               value={price.toString()}
@@ -92,7 +92,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
             />
           </InputWrapper>
 
-          <InputWrapper label="Image URL">
+          <InputWrapper isTextField label="Image URL">
             <TextField
               type="url"
               value={imageUrls[0]}
@@ -101,7 +101,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
             />
           </InputWrapper>
 
-          <InputWrapper label="Barcode code">
+          <InputWrapper isTextField label="Barcode code">
             <TextField
               type="text"
               value={barcode.code}
@@ -110,7 +110,7 @@ const Products: React.FC<ProductsProps> = ({ storeId, currency }) => {
             />
           </InputWrapper>
 
-          <InputWrapper label="Barcode format">
+          <InputWrapper isTextField label="Barcode format">
             <TextField
               type="text"
               value={barcode.format}

@@ -40,7 +40,7 @@ const LoginForm = () => {
           setIsLoggingIn(false);
         }}
       >
-        <InputWrapper label="Email" >
+        <InputWrapper isTextField label="Email" >
           <TextField
             required
             autoFocus
@@ -49,7 +49,7 @@ const LoginForm = () => {
             onChange={setEmail}
           />
         </InputWrapper>
-        <InputWrapper label="Password" >
+        <InputWrapper isTextField label="Password" >
           <TextField
             required
             value={password}

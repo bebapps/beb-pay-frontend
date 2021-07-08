@@ -31,7 +31,7 @@ const CreateAccount = () => {
           register(email, password);
         }}
       >
-        <InputWrapper label="Email" >
+        <InputWrapper isTextField label="Email" >
           <TextField
             required
             autoFocus
@@ -40,7 +40,7 @@ const CreateAccount = () => {
             onChange={setEmail}
           />
         </InputWrapper>
-        <InputWrapper label="Password" >
+        <InputWrapper isTextField label="Password" >
           <TextField
             required
             value={password}
@@ -48,7 +48,7 @@ const CreateAccount = () => {
             type="password"
           />
         </InputWrapper>
-        <InputWrapper label="Confirm password" >
+        <InputWrapper isTextField label="Confirm password" >
           <TextField
             required
             value={passwordConfirmation}

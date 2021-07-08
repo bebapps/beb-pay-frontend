@@ -20,7 +20,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ name, setName, description,
     <div className={css.StoreDetails}>
       <Panel className={css.StoreDetails__panel}>
 
-        <InputWrapper label="Name">
+        <InputWrapper isTextField label="Name">
           <TextField
             value={name}
             onChange={setName}
@@ -28,7 +28,7 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ name, setName, description,
           />
         </InputWrapper>
 
-        <InputWrapper label="Description">
+        <InputWrapper isTextField label="Description">
           <TextField
             type="textarea"
             value={description}
