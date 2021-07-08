@@ -126,10 +126,24 @@ const Manage = () => {
             />
           </Route>
           <Route path={ManagementPath.webhooks}>
-            Webhooks
+            <div className={css.Manage__comingSoon}>
+              <p>
+                Beb Pay will support webhooks when it reaches its beta release.
+              </p>
+              <p>
+                Webhooks will allow you to connect Beb Pay to third party systems. This will be helpful for keeping stock levels in sync, updating customer accounts with transaction details, and much more.
+              </p>
+            </div>
           </Route>
           <Route path={ManagementPath.monitors}>
-            Monitors
+            <div className={css.Manage__comingSoon}>
+              <p>
+                Beb Pay will have transaction monitors when it reaches its beta release.
+              </p>
+              <p>
+                Transaction monitors will allow you to set up a live feed of all the purchases in your store. This will be the perfect tool for stores that have security personnel keeping an eye on everything.
+              </p>
+            </div>
           </Route>
           <Route path={ManagementPath.launch}>
             <Launch
