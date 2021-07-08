@@ -34,7 +34,6 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ name, setName, description,
             value={description}
             onChange={setDescription}
             onBlur={() => onBlur('description')}
-
           />
         </InputWrapper>
 

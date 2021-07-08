@@ -11,6 +11,7 @@ import Launch from './Launch';
 import Store from '../../interfaces/Store';
 import Loader from '../Loader';
 import Details from './Details';
+import Products from './Products';
 
 const Manage = () => {
   const request = useRequest();
@@ -97,7 +98,10 @@ const Manage = () => {
             />
           </Route>
           <Route path={ManagementPath.products}>
-            Products
+            <Products
+              storeId={store.id}
+              currency={store.currency || 'USD'}
+            />
           </Route>
           <Route path={ManagementPath.experience}>
             <Experience
