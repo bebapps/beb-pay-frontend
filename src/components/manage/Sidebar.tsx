@@ -43,7 +43,7 @@ const Sidebar: React.FC = () => {
           variant="none"
           onClick={logout}
         >
-          logout
+          Logout
       </Button>
       </div>
     </div>
